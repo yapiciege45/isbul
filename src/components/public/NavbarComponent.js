@@ -2,8 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IconChevronDown } from '@tabler/icons-react'
-import dynamic from 'next/dynamic';
-import { isMobile } from 'react-device-detect';
 
 const MobileComponent = () => (
     <header className='bg-[#194599] flex justify-center'>
@@ -95,6 +93,21 @@ const DesktopComponent = () => (
     </header>
 )
 
-export default function NavbarComponent() {
+export default function NavbarComponent({ isMobile }) {
     return isMobile ? <MobileComponent /> : <DesktopComponent />;
+}
+
+export async function getServerSideProps(context) {
+    // istemcinin User-Agent string'ini al
+    const userAgent = context.req.headers['user-agent'];
+  
+    // User-Agent string'ini kontrol ederek cihazın mobil olup olmadığını belirle
+    const isMobile = Boolean(userAgent.match(
+      /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    ));
+  
+    // cihaz türünü sayfa props'larına ekleyin
+    return {
+      props: { isMobile },
+    };
 }
