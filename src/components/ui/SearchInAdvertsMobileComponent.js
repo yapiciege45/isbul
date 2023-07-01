@@ -1,6 +1,6 @@
+"use client"
 import React from 'react'
 import ReactSearchBox from 'react-search-box'
-import Image from 'next/image'
 import Link from 'next/link'
 import { IconMapPinFilled, IconSearch, IconMapSearch } from '@tabler/icons-react'
 

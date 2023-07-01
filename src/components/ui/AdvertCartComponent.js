@@ -9,8 +9,9 @@ export default function AdvertCartComponent({fontSize = 12, title, isView = fals
 
   return (
     <div className='relative w-full mt-2' onMouseOver={() => setDetailIsShown(true)} onMouseLeave={() => setDetailIsShown(false)}>
-        <div className={`${detailIsShown ? 'hidden lg:flex' : 'hidden'} z-20 absolute flex-col top-1/2 rounded-lg w-full bg-white border-2 border-[#2253af]`} style={{fontSize: fontSize + 2}}>
-            <div className='p-3 flex flex-col'>
+        <div className={`${detailIsShown ? 'hidden lg:flex' : 'hidden'} z-20 absolute flex-col top-3/4 rounded-lg w-full bg-white border-2 border-[#2253af]`} style={{fontSize: fontSize + 2}}>
+            <div className='p-3 flex flex-col relative'>
+                <div className='absolute -top-1.5' style={{borderLeft: '5px solid transparent',borderRight: '5px solid transparent',borderBottom: '5px solid #2253af'}}></div>
                 <h4 className='text-[#2253af] font-medium' style={{fontSize: fontSize + 4}}>İş Tanımı & Aranan Nitelikler</h4>
                 <p>{description}</p>
             </div>
@@ -206,7 +207,7 @@ export default function AdvertCartComponent({fontSize = 12, title, isView = fals
                                                 :
                                                 <p className='text-[#2253af]' style={{fontSize: fontSize}}>İncelendi</p>
                                                 :
-                                            ''
+                                                <p className='text-[#2253af] invisible' style={{fontSize: fontSize}}>İncelendi</p>
                                     }
                                     {
                                         isSponsored ? <p className='text-[#b89e18]' style={{fontSize: fontSize}}>Sponsorlu</p> : ''

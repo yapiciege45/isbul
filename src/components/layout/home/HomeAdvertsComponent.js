@@ -159,8 +159,8 @@ export default function HomeAdvertsComponent() {
         <section className='w-full flex justify-center lg:hidden mt-12'>
             <div className='container-fluid flex flex-col'>
                 <div className='flex justify-between'>
-                    <p className={`text-[14px] opacity-80 font-semibold text-black ${sponsoredAdverts ? '' : 'border-b'} transition-all`} onClick={() => setSponsoredAdverts(false)}>Son İş İlanları</p>
-                    <p className={`text-[14px] opacity-80 font-semibold text-black ${sponsoredAdverts ? 'border-b' : ''} transition-all`} onClick={() => setSponsoredAdverts(true)}>Sponsorlu İş İlanları</p>
+                    <p className={`text-[14px] opacity-80 font-semibold text-black ${sponsoredAdverts ? '' : 'border-b'} border-black/50 transition-all`} onClick={() => setSponsoredAdverts(false)}>Son İş İlanları</p>
+                    <p className={`text-[14px] opacity-80 font-semibold text-black ${sponsoredAdverts ? 'border-b' : ''} border-black/50 transition-all`} onClick={() => setSponsoredAdverts(true)}>Sponsorlu İş İlanları</p>
                 </div>
                 <div className={`${sponsoredAdverts ? 'hidden' : 'flex'} flex-col`}>
                         <AdvertCartComponent 

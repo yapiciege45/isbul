@@ -1,3 +1,4 @@
+import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconBrandTiktok, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -50,8 +51,8 @@ export default function FooterComponent() {
                 </div>
             </div>
         </div>
-        <div className='w-full flex justify-center items-center' style={{backgroundImage: "url('https://isbul.com.tr/frontend/images/home/footer-background.webp')", backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-            <div className='container-fluid py-5 border-b-2 border-black flex flex-col'>
+        <div className='w-full flex flex-col justify-center items-center' style={{backgroundImage: "url('https://isbul.com.tr/frontend/images/home/footer-background.webp')", backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+            <div className='container-fluid py-5 flex flex-col'>
                 <div className='w-full flex justify-between items-center'>
                     <p className='text-[22px] text-white'>Hizmetlerimizle ilgili tüm sorularınızı yanıtlamaya hazırız.</p>
                     <div className='flex'>
@@ -60,6 +61,83 @@ export default function FooterComponent() {
                     </div>
                 </div>
             </div>
+            <div className="container-fluid flex justify-between mt-8 pb-5 text-white">
+                <div className="flex flex-col" style={{width: '19.9%'}}>
+                    <h6 className='font-bold text-[20px] mb-2'>Site Kullanımı</h6>
+                    <Link href='/' className='text-[14px]'>Genel Koşullar</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Site Haritası</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Pozisyonlar</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Bölümler</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Ücretsiz İlan Ver</Link>
+                </div>
+                <div className="flex flex-col" style={{width: '19.9%'}}>
+                    <h6 className='font-bold text-[20px] mb-2'>Yardım</h6>
+                    <Link href='/' className='text-[14px]'>Sıkça Sorulan Sorular</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Sorum Var</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Önerim Var</Link>
+                </div>
+                <div className="flex flex-col" style={{width: '19.9%'}}>
+                    <h6 className='font-bold text-[20px] mb-2'>Hakkımızda</h6>
+                    <Link href='/' className='text-[14px]'>Reklam Verin</Link>
+                    <Link href='/' className='text-[14px] mt-1'>İletişim</Link>
+                    <Link href='/' className='text-[14px] mt-1'>İlan Satın Al</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Blog</Link>
+                </div>
+                <div className="flex flex-col" style={{width: '19.9%'}}>
+                    <h6 className='font-bold text-[20px] mb-2'>Veri Politikamız</h6>
+                    <Link href='/' className='text-[14px]'>Kullanım Koşulları</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Kredi Kartı Saklama Koşulları</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Gizlilik Sözleşmesi</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Üyelik Sözleşmesi</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Çerezlerin Kullanımı</Link>
+                    <Link href='/' className='text-[14px]'>Kalite Politikası</Link>
+                    <Link href='/' className='text-[14px] mt-1'>KVKK Metni</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Ön Bilgilendirme Formu</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Mesafeli Satış Sözleşmesi</Link>
+                    <Link href='/' className='text-[14px] mt-1'>Kurumsal Üyelik Sözleşmesi</Link>
+                </div>
+                <div className="flex flex-col" style={{width: '19.9%'}}>
+                    <h6 className='font-bold text-[20px] mb-2'>Sosyal Medya</h6>
+                    <Link href='/' className='text-[14px] flex items-center'>
+                        <IconBrandLinkedin size={16}></IconBrandLinkedin>
+                        <p className='text-[14px] ml-2'>LinkedIn</p>
+                    </Link>
+                    <Link href='/' className='text-[14px] flex items-center'>
+                        <IconBrandFacebook size={16}></IconBrandFacebook>
+                        <p className='text-[14px] ml-2'>Facebook</p>
+                    </Link>
+                    <Link href='/' className='text-[14px] flex items-center'>
+                        <IconBrandInstagram size={16}></IconBrandInstagram>
+                        <p className='text-[14px] ml-2'>Instagram</p>
+                    </Link>
+                    <Link href='/' className='text-[14px] flex items-center'>
+                        <IconBrandTwitter size={16}></IconBrandTwitter>
+                        <p className='text-[14px] ml-2'>Twitter</p>
+                    </Link>
+                    <Link href='/' className='text-[14px] flex items-center'>
+                        <IconBrandYoutube size={16}></IconBrandYoutube>
+                        <p className='text-[14px] ml-2'>Youtube</p>
+                    </Link>
+                    <Link href='/' className='text-[14px] flex items-center'>
+                        <IconBrandTiktok size={16}></IconBrandTiktok>
+                        <p className='text-[14px] ml-2'>Tiktok</p>
+                    </Link>
+                </div>
+            </div>
+        </div>
+        <div className='w-full flex justify-center'>
+            <div className="container-fluid flex py-3">
+                <Image 
+                    src="https://isbul.com.tr/frontend/images/svg/iskur.svg"
+                    width={60}
+                    height={60}
+                    alt="company logo for footer"
+                />
+                <p className='text-[14px] text-[#4e4e4e]'>Gezer Grup İnsan Kaynakları Eğitim ve Danışmanlık Tic. A.Ş., 18.10.2021 - 17.10.2024 tarihleri arasında faaliyette bulunmak üzere Türkiye İş Kurumu tarafından 13.10.2021 tarihli ve 9837397 sayılı karar uyarınca 1283 numaralı izin belgesi ile faaliyetlerini sürdürmektedir. 4904 sayılı Türkiye İş Kurumu Kanunu gereğince iş arayanlardan ücret alınması yasaktır. Şikayetleriniz için, İstanbul Çalışma ve İş Kurumu İl Müdürlüğü Bahçelievler Hizmet Merkezi’ne başvurabilirsiniz.</p>
+            </div>
+        </div>
+        <div className='w-full flex justify-center items-center py-2 bg-[#efefef]'>
+            <p className='text-[12px] text-[#4e4e4e]'>Copyright © 2008 - 2023 isbul.net Gezer Grup İnsan Kaynakları Eğitim ve Danışmanlık Tic. A.Ş. iştirakidir.</p>
         </div>
     </footer>
   )

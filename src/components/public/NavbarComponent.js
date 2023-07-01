@@ -102,16 +102,16 @@ export default function NavbarComponent() {
                     <nav className='h-full hidden lg:block'>
                         <div className='flex h-full'>
                             <Link href="/" className='text-white h-full px-5 font-medium hover:text-[#86adf3] flex items-center text-[14px] transition-all'>
-                                <p href="/">Ana Sayfa</p>
+                                <p>Ana Sayfa</p>
                             </Link>
-                            <Link href="/" className='text-white h-full px-5 font-medium hover:text-[#86adf3] flex items-center text-[14px] ml-1 transition-all'>
-                                <p href="/">İş İlanları</p>
+                            <Link href="/is-ilanlari" className='text-white h-full px-5 font-medium hover:text-[#86adf3] flex items-center text-[14px] ml-1 transition-all'>
+                                <p>İş İlanları</p>
                             </Link>
                             <Link href="/" className='text-white h-full px-5 font-medium bg-[#2857b0] flex items-center hover:text-[#86adf3] text-[14px] ml-1 transition-all'>
-                                <p href="/">CV OLUŞTUR</p>
+                                <p>CV OLUŞTUR</p>
                             </Link>
                             <Link href="/" className="text-white relative h-full px-5 font-medium bg-[#2857b0] flex items-center hover:text-[#86adf3] text-[14px] ml-1 transition-all group">
-                                <p href="/" className="mr-2">İŞ ARAYAN</p>
+                                <p className="mr-2">İŞ ARAYAN</p>
                                 <IconChevronDown size={16} color="white" />
                                 <div className="w-full flex-col items-center bg-white absolute top-20 left-0 p-3 hidden group-hover:flex">
                                     <Link href="/" className="text-black">Giriş Yap</Link>
@@ -119,7 +119,7 @@ export default function NavbarComponent() {
                                 </div>
                             </Link>
                             <Link href="/" className="text-white relative h-full px-5 font-medium bg-[#2857b0] flex items-center hover:text-[#86adf3] text-[14px] ml-1 transition-all group">
-                                <p href="/" className="mr-2">İŞVEREN</p>
+                                <p className="mr-2">İŞVEREN</p>
                                 <IconChevronDown size={16} color="white" />
                                 <div className="w-full flex-col items-center bg-white absolute top-20 left-0 p-3 hidden group-hover:flex">
                                     <Link href="/" className="text-black">Giriş Yap</Link>
@@ -127,7 +127,7 @@ export default function NavbarComponent() {
                                 </div>
                             </Link>
                             <Link href="/" className='text-white h-full px-5 font-medium bg-[#2857b0] flex items-center hover:text-[#86adf3] text-[14px] ml-1 transition-all'>
-                                <p href="/">ÜCRETSİZ İLAN VER</p>
+                                <p>ÜCRETSİZ İLAN VER</p>
                             </Link>
                         </div>
                     </nav>
