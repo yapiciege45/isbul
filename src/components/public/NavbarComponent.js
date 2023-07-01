@@ -67,7 +67,7 @@ export default function NavbarComponent() {
                         <Link href="/" className='text-[14px] mt-1'>Üye Ol</Link>
                     </div>
                 </div>
-                <Link href='/' className='flex items-center mt-2'>
+                <Link href='/is-ilanlari' className='flex items-center mt-2'>
                     <IconList size={20}></IconList>
                     <p className='text-[16px] ml-2'>İş İlanları</p>
                 </Link>
