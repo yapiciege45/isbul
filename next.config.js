@@ -8,6 +8,18 @@ const nextConfig = {
             port: '',
             pathname: '/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'isbul.com.tr',
+            port: '',
+            pathname: '/**',
+          },
+          {
+            protocol: 'https',
+            hostname: 'img.imageus.dev',
+            port: '',
+            pathname: '/**',
+          },
         ],
       },
 }

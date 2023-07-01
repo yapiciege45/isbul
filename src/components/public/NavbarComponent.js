@@ -19,7 +19,7 @@ export default function NavbarComponent() {
           key: "vue",
           value: "Şehitkamil",
         },
-      ]);
+    ]);
 
     useEffect(() => {
         const handleScroll = () => {
