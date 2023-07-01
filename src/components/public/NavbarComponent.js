@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { IconChevronDown, IconMapPinFilled, IconSearch } from '@tabler/icons-react'
+import { IconBuilding, IconChevronDown, IconFilePlus, IconList, IconMail, IconMapPinFilled, IconSearch, IconUser } from '@tabler/icons-react'
 import ReactSearchBox from 'react-search-box'
 
 import '../../styles/globals.css'
@@ -20,6 +20,9 @@ export default function NavbarComponent() {
           value: "Şehitkamil",
         },
     ]);
+    const [isArayanDropdownMobile, setIsArayanDropdownMobile] = useState(false)
+    const [isVerenDropdownMobile, setIsVerenDropdownMobile] = useState(false)
+    const [kurumsalDropdownMobile, setKurumsalDropdownMobile] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,8 +40,71 @@ export default function NavbarComponent() {
 
     return (
         <>
-            <div className={`fixed ${mobileNav ? 'max-w-full' : 'max-w-0'} w-3/4 flex-col lg:hidden h-full bg-black/50 z-20 transition-all`}>
-
+            <div className={`fixed ${mobileNav ? 'max-w-full p-10' : 'max-w-0'} overflow-x-hidden w-3/4 flex-col lg:hidden h-full bg-black/90 text-white z-20 transition-all`}>
+                <div className='flex flex-col w-full'>
+                    <div className="flex justify-between items-center w-full" onClick={() => setIsArayanDropdownMobile(!isArayanDropdownMobile)}>
+                        <div className='flex items-center'>
+                            <IconUser size={20}></IconUser>
+                            <p className='text-[16px] ml-2'>İş Arayan</p>
+                        </div>
+                        <IconChevronDown size={16} style={{transition: '.2s',transform: `${isArayanDropdownMobile ? 'rotate(180deg)' : 'rotate(0deg)'}`}}></IconChevronDown>
+                    </div>
+                    <div className={`flex flex-col mt-2 ${isArayanDropdownMobile ? 'max-h-full' : 'max-h-0'} overflow-hidden transition-all`}>
+                        <Link href="/" className='text-[14px]'>Giriş Yap</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Üye Ol</Link>
+                    </div>
+                </div>
+                <div className='flex flex-col w-full mt-4'>
+                    <div className="flex justify-between items-center w-full" onClick={() => setIsVerenDropdownMobile(!isVerenDropdownMobile)}>
+                        <div className='flex items-center'>
+                            <IconBuilding size={20}></IconBuilding>
+                            <p className='text-[16px] ml-2'>İş Veren</p>
+                        </div>
+                        <IconChevronDown size={16} style={{transition: '.2s',transform: `${isVerenDropdownMobile ? 'rotate(180deg)' : 'rotate(0deg)'}`}}></IconChevronDown>
+                    </div>
+                    <div className={`flex flex-col mt-2 ${isVerenDropdownMobile ? 'max-h-full' : 'max-h-0'} overflow-hidden transition-all`}>
+                        <Link href="/" className='text-[14px]'>Giriş Yap</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Üye Ol</Link>
+                    </div>
+                </div>
+                <Link href='/' className='flex items-center mt-2'>
+                    <IconList size={20}></IconList>
+                    <p className='text-[16px] ml-2'>İş İlanları</p>
+                </Link>
+                <Link href='/' className='flex items-center mt-4'>
+                    <IconFilePlus size={20}></IconFilePlus>
+                    <p className='text-[16px] ml-2'>CV Oluştur</p>
+                </Link>
+                <Link href='/' className='flex items-center mt-4'>
+                    <IconFilePlus size={20}></IconFilePlus>
+                    <p className='text-[16px] ml-2'>Ücretsiz İlan Ver</p>
+                </Link>
+                <div className='flex flex-col w-full mt-4'>
+                    <div className="flex justify-between items-center w-full" onClick={() => setKurumsalDropdownMobile(!kurumsalDropdownMobile)}>
+                        <div className='flex items-center'>
+                            <IconBuilding size={20}></IconBuilding>
+                            <p className='text-[16px] ml-2'>Kurumsal</p>
+                        </div>
+                        <IconChevronDown size={16} style={{transition: '.2s',transform: `${kurumsalDropdownMobile ? 'rotate(180deg)' : 'rotate(0deg)'}`}}></IconChevronDown>
+                    </div>
+                    <div className={`flex flex-col mt-2 ${kurumsalDropdownMobile ? 'max-h-full' : 'max-h-0'} overflow-hidden transition-all`}>
+                        <Link href="/" className='text-[14px]'>Kullanım Koşulları</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Kredi Kartı Saklama Koşulları</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Gizlilik Sözleşmesi</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Üyelik Sözleşmesi</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Çerezlerin Kullanımı</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Kalite Politikası</Link>
+                        <Link href="/" className='text-[14px] mt-1'>KVKK Metni</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Kullanım Koşulları</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Ön Bilgilendirme Formu</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Mesafeli Satış Sözleşmesi</Link>
+                        <Link href="/" className='text-[14px] mt-1'>Kurumsal Üyelik Sözleşmesi</Link>
+                    </div>
+                </div>
+                <Link href='/' className='flex items-center mt-2'>
+                    <IconMail size={20}></IconMail>
+                    <p className='text-[16px] ml-2'>İletişim</p>
+                </Link>
             </div>
             <div className={`w-full bg-white h-20 fixed ${isScrolled ? 'top-0' : '-top-28'} transition-all z-30 hidden lg:flex justify-center`}>
                 <div className='container-fluid h-full flex items-center justify-between'>
